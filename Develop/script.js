@@ -5,6 +5,13 @@ function generatePassword() {
   const passwordLength=window.prompt("How long should the password be ? Choose between 8-128 characters.")
 console.log (passwordLength)
 
+if (passwordLength >= 8 && passwordLength <= 128){
+  //continue with password
+} else {
+  window.alert ("You need to provide a valid answer! Please choose betwwen 8 -128 characters.");
+return
+}
+
 const upperCase=window.confirm("Do you want an upper case letter?")
 console.log (upperCase)
 
@@ -13,20 +20,6 @@ const lowerCase=window.confirm("Do you want lower case letter?")
 const numbers=window.confirm("Do you want numbers in password?")
 
 const specialCharacters=window.confirm("Do you want special characters?")
-// possible solution
- // if (passwordLength === "" || passwordLength === null) {
-  //  window.alert ("You need to provide a valid answer! Please choose betwwen 8 -128 characters.");
-  
-
-  //return passwordLength();
-//}
-
-if (passwordLength >= 8 && passwordLength <= 128){
-  //continue with password
-} else {
-  window.alert ("You need to provide a valid answer! Please choose betwwen 8 -128 characters.");
-}
-
 
  if (upperCase) {
   validSymbols += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
